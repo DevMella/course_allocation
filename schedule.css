@@ -1,0 +1,356 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+}
+.body{
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 10px;
+    display: flex;
+    gap: 3 0px;
+}
+.all{
+  overflow: hidden !important;
+}
+.sidebar{
+    width: 20%;
+    background-color: #25252b;
+    border-radius: 10px;
+    color: white !important;
+    position: fixed;
+}
+.logo{
+  padding: 25px;
+}
+.button {
+    --border-right: 6px;
+    --text-stroke-color:white;
+    --animation-color: #54baac;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+    background: transparent;
+    border: none;
+    font-weight:600;
+  }
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  .button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }
+  .icon.active {
+    color: white; 
+    background-color: #54baac;
+    border-radius: 0px 30px 30px 0px;
+    padding: 0px 0px 0px 25px;
+    width: 100%;
+    height: 50px;
+}
+.icons a{
+  text-decoration: none;
+  color: white;
+}
+.icon{
+  padding: 10px 0px 0px 25px;
+  display: flex;
+  align-items: center;
+}
+.icon p{
+  font-weight: 600;
+  margin-top: 17px;
+}
+.icon i{
+  font-size: 21px;
+}
+.log{
+  background-color: #54baac;
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 60px;
+  position: relative;
+}
+.cir{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-left: 80px;
+  margin-top: -30px;
+}
+.cir i{
+  color: #54baac !important;
+}
+.top{
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+.main-body{
+  width: 77%;
+  margin-left: 295px;
+}
+.top input{
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: white;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px 10px 10px 50px;
+}
+.hol i{
+  position: absolute;
+  right: 280px;
+  margin-top: 10px;
+}
+.box{
+  width: 40px;
+  height: 40px;
+  border-radius: 7px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bad{
+    background-color: #d5e8e5;
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    border-radius: 6px;
+}
+.bal{
+    background-color: #67676b;
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    border-radius: 6px;
+}
+.content{
+    width: 100%;
+    background-color: white;
+    padding: 10px 8px 0px 8px;
+    border-radius: 6px;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    position: relative;
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; 
+    border-radius: 5px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.mine input{
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    margin-bottom: 15px;
+    background-color: #d5e8e5;
+}
+.mine form{
+    width: 100%;
+    box-shadow: #63636333 0px 1px 4px 0px;
+    background-color: white;
+    padding: 20px 20px 10px 20px;
+    border-radius: 7px;
+    margin-bottom: 20px ;
+}
+.mine button{
+    width: 100%;
+    margin-top: 26px;
+    background-color: #54baac;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    height: 40px;
+}
+.wat button i{
+    animation: star 2s 1s infinite;
+}
+@keyframes star {
+    0%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.kin{
+  box-shadow: #63636333 0px 1px 4px 0px;
+  width: 100%;
+  border-radius: 3px;
+  padding: 50px 20px 50px 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transform: translateY(-24%);
+  background: white;
+}
+.kan{
+  box-shadow: #63636333 0px 1px 4px 0px;
+  width: 100%;
+  border-radius: 3px;
+  padding: 30px 15px 35px 15px;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-20%);
+  background: white;
+}
+.wan{
+  width: 100%;
+  background-image: url(./large-triangles.svg);
+  height: 32vh;
+}
+.cou{
+  width: 120px;
+  height: 120px;
+}
+.paa{
+  position: absolute;
+  margin-top: 84px;
+  margin-left: 85px;
+}
+.kan input{
+  width: 100%;
+  height: 40px;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  outline: none;
+  padding: 10px;
+  border: none;
+  margin-top: 5px;
+}
+.active-tab{
+  width: 300px;
+  height: 40px;
+  background-color: #54baac;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px 1px 10px 1px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.line{
+  width: 60px;
+  margin-bottom: 10px;
+  height: 1px;
+  background-color: #54baac;
+}
+.lane{
+  width: 80px;
+  margin-bottom: 10px;
+  height: 1px;
+  background-color: #54baac;
+}
+.one{
+  width: 100%;
+  padding: 10px;
+  background-color: #54baac;
+  border-radius: 6px;
+  color: white;
+}
+.one i{
+  display: flex;
+  justify-content: end;
+  font-size: 50px;
+  color: #07453d;
+}
+.ahh i {
+  font-size: 100px;
+  color: whitesmoke;
+}
+.ones{
+  background-color: white;
+  box-shadow: #63636333 0px 1px 4px 0px;
+  color: #25252b;
+}
+.ahhs i {
+  color: pink;
+  font-size: 100px;
+}
+.ahhe i {
+  color: #07453d;
+  font-size: 100px;
+}
+@media (max-width:764px) {
+  .sidebar,.hol{
+    display: none;
+  }
+  .main-body{
+    margin-left: 0px;
+    width: 100%;
+  }
+  .image{
+    height: 100px;
+  }
+  .bab{
+    background-color: black;
+    padding: 10px 10px 0px 10px;
+  }
+  .bab i{
+    font-size: 20px;
+  }
+  .fire{
+    margin-bottom: 100px;
+  }
+  .mat{
+    margin-top: 20px;
+  }
+}

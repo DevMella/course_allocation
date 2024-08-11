@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>course_allocation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/93483deb2b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="all">
+        <div class="body">
+            <div class="icons bab d-flex justify-content-between  fixed-bottom w-100 d-lg-none d-md-none d-block gap-2">
+                <div>
+                    <a href="lecturer.php" class="d-flex flex-column align-items-center">
+                        <i class="bi bi-house-add-fill text-center fs-4"></i>
+                        <p>Home</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="books.php" class="d-flex flex-column align-items-center">
+                        <i class="bi bi-calendar-check"></i>
+                        <p>Schedule</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="acess.php" class="d-flex flex-column align-items-center">
+                        <i class="bi bi-book-fill"></i>
+                        <p>Courses</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="profile.php" class="d-flex flex-column align-items-center">
+                        <i class="bi bi-person fs-4"></i>
+                        <p>Me</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="chat.php" class="d-flex flex-column align-items-center">
+                        <i class="bi bi-box-arrow-right fs-4"></i>
+                        <p>Chat</p>
+                    </a>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="logo">
+                    <button class="button" data-text="Awesome">
+                        <span class="actual-text">&nbsp;coursie&nbsp;</span>
+                        <span aria-hidden="true" class="hover-text">&nbsp;coursie&nbsp;</span>
+                    </button>
+                </div>
+                <div class="icons mt-4">
+                    <a href="dashboard.html">
+                        <div class="icon d-flex gap-2 mb-3" id="dashboard">
+                            <i class="bi bi-house-add-fill"></i>
+                            <p>Dashboard</p>
+                        </div>
+                    </a>
+                    <a href="schedule.html">
+                        <div class="icon d-flex gap-2 mb-3" id="schedule">
+                            <i class="bi bi-calendar-check"></i>
+                            <p>Schedule</p>
+                        </div>
+                    </a>
+                    <a href="courses.html">
+                        <div class="icon d-flex gap-2 mb-3" id="courses">
+                            <i class="bi bi-book-fill"></i>
+                            <p>Courses</p>
+                        </div>
+                    </a>
+                    <a href="profile.html">
+                        <div class="icon d-flex gap-2 mb-3" id="profile">
+                            <i class="bi bi-person-add"></i>
+                            <p>Profile</p>
+                        </div>
+                    </a>
+                    <div class="yemi p-2">
+                        <div class="log">
+                             <div class="cir"><i class="bi bi-box-arrow-right"></i></div>
+                             <p class="text-center mt-4">Sign out to protect your privacy and close your session</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-body">
+                <div class="top">
+                    <h6>Hi, Mia Taylor 👏</h6>
+                    <div class="d-flex gap-3">
+                        <div class="hol">
+                            <input type="text" placeholder="Search">
+                            <i class="bi bi-search"></i>
+                        </div>
+                        <div class="box"><i class="bi bi-bell-fill"></i></div>
+                    </div>
+                </div>
+                <div class="mine mt-4">
+                    <div class="row g-5">
+                        <div class="col col-lg-8">
+                            <h4>My Courses</h4>
+                            <div class="order">
+                                <div class="d-flex gap-5 mt-3 yaa">
+                                    <h6 style="color: black; font-weight: 600;" id="allBtn">All</h6>
+                                    <h6 id="completedBtn">Completed</h6>
+                                </div>
+                                <div class="mt-3 male contai" id="malecontainer">
+                                    <div class="lar d-flex gap-4">
+                                        <div class="image">
+                                            <img src="https://i.pinimg.com/564x/33/f8/5a/33f85ae4b62c8bbaf20283852fa74655.jpg" width="100%" alt="">
+                                        </div>
+                                        <div >
+                                            <h5 style="font-weight: 600;">Web Development</h5>
+                                            <p style="font-size: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, esse!</p>
+                                            <div class="d-flex align-items-center w-100 justify-content-between">
+                                                <div class="d-flex gap-3 " style="margin-top: -6px;">
+                                                    <h6 style="color: gainsboro;">Start</h6>
+                                                    <h6 style="font-weight: 600;">Nov 5</h6>
+                                                </div>
+                                                <div class="dot" style="color: #54baac;">
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-half"></i>
+                                                </div>
+                                            </div>
+                                            <button class="bat" data-bs-toggle="modal" data-bs-target="#exampleModal">General course </button>
+                                        </div>
+                                    </div>
+                                    <div class="lar d-flex gap-4 mt-3">
+                                        <div class="image">
+                                            <img src="https://i.pinimg.com/474x/07/cb/9a/07cb9aa23acb6f58106c46f078e73894.jpg" width="100%" alt="">
+                                        </div>
+                                        <div >
+                                            <h5 style="font-weight: 600;">Phishing Attacks</h5>
+                                            <p style="font-size: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, esse!</p>
+                                            <div class="d-flex align-items-center w-100 justify-content-between">
+                                                <div class="d-flex gap-3 " style="margin-top: -6px;">
+                                                    <h6 style="color: gainsboro;">Start</h6>
+                                                    <h6 style="font-weight: 600;">Nov 5</h6>
+                                                </div>
+                                                <div class="dot" style="color: #54baac;">
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-half"></i>
+                                                </div>
+                                            </div>
+                                            <button class="bat" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cyber Security</button>
+                                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Phishing Attacks</h1>
+                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                      <p>All 300-level students in the Cyber Security department at LAUTECH are encouraged to enroll in this comprehensive course, which is tailored specifically to meet the educational needs and academic requirements of third-year students in the field of cybersecurity.</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                      <button type="button" class="btn btn-primary">Understood</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="lar d-flex gap-4 mt-3">
+                                        <div class="image">
+                                            <img src="https://i.pinimg.com/736x/b8/f9/d2/b8f9d23fbf0997c729d8ff9cb3f7b74b.jpg" width="100%" alt="">
+                                        </div>
+                                        <div >
+                                            <h5 style="font-weight: 600;">Introduction to Data Structure</h5>
+                                            <p style="font-size: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, esse!</p>
+                                            <div class="d-flex align-items-center w-100 justify-content-between">
+                                                <div class="d-flex gap-3 " style="margin-top: -6px;">
+                                                    <h6 style="color: gainsboro;">Start</h6>
+                                                    <h6 style="font-weight: 600;">Nov 5</h6>
+                                                </div>
+                                                <div class="dot" style="color: #54baac;">
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-half"></i>
+                                                </div>
+                                            </div>
+                                            <button class="bat" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Computer science</button>
+                                            <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                      <h1 class="modal-title fs-5" id="staticBackdropLabel1">Phishing Attacks</h1>
+                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                      <p>All 200-level students in the Computer Science department at LAUTECH are encouraged to enroll in this comprehensive course, which is tailored specifically to meet the educational needs and academic requirements of third-year students in the field of cybersecurity.</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                      <button type="button" class="btn btn-primary">Understood</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Introduction to Web Development</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>All 100-level students at LAUTECH are encouraged to enroll in this comprehensive course, which is tailored specifically to meet the educational needs and academic requirements of first-year students across all departments</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-3 mate contain" id="matecontainer" >
+                                    <div class="lar d-flex gap-4">
+                                        <div class="image">
+                                            <img src="https://i.pinimg.com/564x/33/f8/5a/33f85ae4b62c8bbaf20283852fa74655.jpg" width="100%" alt="">
+                                        </div>
+                                        <div >
+                                            <h5 style="font-weight: 600;">Web Development</h5>
+                                            <p style="font-size: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, esse!</p>
+                                            <div class="d-flex align-items-center w-100 justify-content-between">
+                                                <div class="d-flex gap-3 " style="margin-top: -6px;">
+                                                    <h6 style="color: gainsboro;">Start</h6>
+                                                    <h6 style="font-weight: 600;">Nov 5</h6>
+                                                </div>
+                                                <div class="dot" style="color: #54baac;">
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-half"></i>
+                                                </div>
+                                            </div>
+                                            <button class="bat" data-bs-toggle="modal" data-bs-target="#exampleModal">Completed<i class="bi bi-check2" style="color: #54baac; font-size: 22px; font-weight: 800;"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="lar d-flex gap-4 mt-3">
+                                        <div class="image">
+                                            <img src="https://i.pinimg.com/474x/07/cb/9a/07cb9aa23acb6f58106c46f078e73894.jpg" width="100%" alt="">
+                                        </div>
+                                        <div >
+                                            <h5 style="font-weight: 600;">Phishing Attacks</h5>
+                                            <p style="font-size: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, esse!</p>
+                                            <div class="d-flex align-items-center w-100 justify-content-between">
+                                                <div class="d-flex gap-3 " style="margin-top: -6px;">
+                                                    <h6 style="color: gainsboro;">Start</h6>
+                                                    <h6 style="font-weight: 600;">Nov 5</h6>
+                                                </div>
+                                                <div class="dot" style="color: #54baac;">
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-half"></i>
+                                                </div>
+                                            </div>
+                                            <button class="bat" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Completed<i class="bi bi-check2" style="color: #54baac; font-size: 22px; font-weight: 800;"></i></button>
+                                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Phishing Attacks</h1>
+                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                      <p>All 300-level students in the Cyber Security department at LAUTECH are encouraged to enroll in this comprehensive course, which is tailored specifically to meet the educational needs and academic requirements of third-year students in the field of cybersecurity.</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                      <button type="button" class="btn btn-primary">Understood</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="lar d-flex gap-4 mt-3">
+                                        <div class="image">
+                                            <img src="https://i.pinimg.com/736x/b8/f9/d2/b8f9d23fbf0997c729d8ff9cb3f7b74b.jpg" width="100%" alt="">
+                                        </div>
+                                        <div >
+                                            <h5 style="font-weight: 600;">Introduction to Data Structure</h5>
+                                            <p style="font-size: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, esse!</p>
+                                            <div class="d-flex align-items-center w-100 justify-content-between">
+                                                <div class="d-flex gap-3 " style="margin-top: -6px;">
+                                                    <h6 style="color: gainsboro;">Start</h6>
+                                                    <h6 style="font-weight: 600;">Nov 5</h6>
+                                                </div>
+                                                <div class="dot" style="color: #54baac;">
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-fill"></i>
+                                                    <i class="bi bi-star-half"></i>
+                                                </div>
+                                            </div>
+                                            <button class="bat" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Completed<i class="bi bi-check2" style="color: #54baac; font-size: 22px; font-weight: 800;"></i></button>
+                                            <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                      <h1 class="modal-title fs-5" id="staticBackdropLabel1">Phishing Attacks</h1>
+                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                      <p>All 200-level students in the Computer Science department at LAUTECH are encouraged to enroll in this comprehensive course, which is tailored specifically to meet the educational needs and academic requirements of third-year students in the field of cybersecurity.</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                      <button type="button" class="btn btn-primary">Understood</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4">
+                            <div class="calendar mb-4">
+                                <div class="header">
+                                    <button id="prev-month">&lt;</button>
+                                    <span id="month-year" style="font-weight: 600; font-size: 20px;"></span>
+                                    <button id="next-month">&gt;</button>
+                                </div>
+                                <div class="weekdays">
+                                    <div>Sun</div>
+                                    <div>Mon</div>
+                                    <div>Tue</div>
+                                    <div>Wed</div>
+                                    <div>Thu</div>
+                                    <div>Fri</div>
+                                    <div>Sat</div>
+                                </div>
+                                <div id="days" class="days"></div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 style="font-weight:600;">Schedule</h5> 
+                                <div class="d-flex align-items-center" id="seeAllBtn">
+                                    <h6 class="mt-1">See all</h6>
+                                    <i class="bi bi-arrow-right-short" style="color: #54baac;font-size: 29px; font-weight: 600;"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="juu d-flex justify-content-between align-items-center">
+                                    <h4>07</h4>
+                                    <div class="line"></div>
+                                    <div>
+                                        <h6>Data Structure</h6>
+                                        <p style="font-size: 14px;">2hours</p>
+                                    </div>
+                                    <p style="font-size: 14px;">11:00 - 1PM</p>
+                                </div>
+                                <div class="juus d-flex justify-content-between align-items-center mt-3">
+                                    <h4>07</h4>
+                                    <div class="line"></div>
+                                    <div>
+                                        <h6>Data Structure</h6>
+                                        <p style="font-size: 14px;">2hours</p>
+                                    </div>
+                                    <p style="font-size: 14px;">11:00 - 1PM</p>
+                                </div>
+                                <div class="juus d-flex justify-content-between align-items-center mt-3">
+                                    <h4>07</h4>
+                                    <div class="line"></div>
+                                    <div>
+                                        <h6>Data Structure</h6>
+                                        <p style="font-size: 14px;">2hours</p>
+                                    </div>
+                                    <p style="font-size: 14px;">11:00 - 1PM</p>
+                                </div>
+                                <div class="juu hidden mt-3 d-flex justify-content-between align-items-center hidden">
+                                    <h4>07</h4>
+                                    <div class="line"></div>
+                                    <div>
+                                        <h6>Data Structure</h6>
+                                        <p style="font-size: 14px;">2hours</p>
+                                    </div>
+                                    <p style="font-size: 14px;">11:00 - 1PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        const currentPageId = "dashboard";
+        document.getElementById(currentPageId).classList.add("active");
+        const daysContainer = document.getElementById('days');
+        const monthYearDisplay = document.getElementById('month-year');
+        const prevMonthBtn = document.getElementById('prev-month');
+        const nextMonthBtn = document.getElementById('next-month');
+
+        let currentDate = new Date();
+
+        function renderCalendar(date) {
+            daysContainer.innerHTML = '';
+            const month = date.getMonth();
+            const year = date.getFullYear();
+
+            monthYearDisplay.textContent = date.toLocaleString('default', { month: 'long' }) + ' ' + year;
+
+            const firstDayOfMonth = new Date(year, month, 1).getDay();
+            const lastDateOfMonth = new Date(year, month + 1, 0).getDate();
+            const lastDateOfLastMonth = new Date(year, month, 0).getDate();
+
+            for (let i = firstDayOfMonth; i > 0; i--) {
+                const day = document.createElement('div');
+                day.classList.add('prev-month-day');
+                day.textContent = lastDateOfLastMonth - i + 1;
+                daysContainer.appendChild(day);
+            }
+
+            for (let i = 1; i <= lastDateOfMonth; i++) {
+                const day = document.createElement('div');
+                day.textContent = i;
+                if (
+                    i === currentDate.getDate() &&
+                    month === currentDate.getMonth() &&
+                    year === currentDate.getFullYear()
+                ) {
+                    day.classList.add('today');
+                }
+                daysContainer.appendChild(day);
+            }
+        }
+
+        prevMonthBtn.addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            renderCalendar(currentDate);
+        });
+
+        nextMonthBtn.addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            renderCalendar(currentDate);
+        });
+
+        renderCalendar(currentDate);
+
+        document.getElementById('seeAllBtn').addEventListener('click', function() {
+            let hiddenBoxes = document.querySelectorAll('.hidden');
+            hiddenBoxes.forEach(function(box) {
+                box.classList.remove('hidden');
+            });
+            this.style.display = 'none'; 
+        });
+
+        document.getElementById('allBtn').addEventListener('click', function() {
+            document.getElementById('malecontainer').style.display = 'block';
+            document.getElementById('matecontainer').style.display = 'none';
+        });
+
+        document.getElementById('completedBtn').addEventListener('click', function() {
+            document.getElementById('matecontainer').style.display = 'block';
+            document.getElementById('malecontainer').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

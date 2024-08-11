@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>course_allocation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/93483deb2b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="schedule.css">
+</head>
+<body>
+    <div class="all">
+        <div class="body">
+            <div class="icons bab d-flex justify-content-between  fixed-bottom w-100 d-lg-none d-md-none d-block gap-2">
+                <div>
+                    <a href="lecturer.php" class="d-flex flex-column align-items-center">
+                        <i class="bi bi-house-add-fill text-center fs-4"></i>
+                        <p>Home</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="books.php" class="d-flex flex-column align-items-center">
+                        <i class="bi bi-calendar-check"></i>
+                        <p>Schedule</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="acess.php" class="d-flex flex-column align-items-center">
+                        <i class="bi bi-book-fill"></i>
+                        <p>Courses</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="profile.php" class="d-flex flex-column align-items-center">
+                        <i class="bi bi-person fs-4"></i>
+                        <p>Me</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="chat.php" class="d-flex flex-column align-items-center">
+                        <i class="bi bi-box-arrow-right fs-4"></i>
+                        <p>Chat</p>
+                    </a>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="logo">
+                    <button class="button" data-text="Awesome">
+                        <span class="actual-text">&nbsp;coursie&nbsp;</span>
+                        <span aria-hidden="true" class="hover-text">&nbsp;coursie&nbsp;</span>
+                    </button>
+                </div>
+                <div class="icons mt-4">
+                    <a href="dashboard.html">
+                        <div class="icon d-flex gap-2 mb-3" id="dashboard">
+                            <i class="bi bi-house-add-fill"></i>
+                            <p>Dashboard</p>
+                        </div>
+                    </a>
+                    <a href="schedule.html">
+                        <div class="icon d-flex gap-2 mb-3" id="schedule">
+                            <i class="bi bi-calendar-check"></i>
+                            <p>Schedule</p>
+                        </div>
+                    </a>
+                    <a href="courses.html">
+                        <div class="icon d-flex gap-2 mb-3" id="courses">
+                            <i class="bi bi-book-fill"></i>
+                            <p>Courses</p>
+                        </div>
+                    </a>
+                    <a href="profile.html">
+                        <div class="icon d-flex gap-2 mb-3" id="profile">
+                            <i class="bi bi-person-add"></i>
+                            <p>Profile</p>
+                        </div>
+                    </a>
+                    <div class="yemi p-2">
+                        <div class="log">
+                             <div class="cir"><i class="bi bi-box-arrow-right"></i></div>
+                             <p class="text-center mt-4">Sign out to protect your privacy and close your session</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-body">
+                <div class="top">
+                    <h6>Hi, Mia Taylor 👏</h6>
+                    <div class="d-flex gap-3">
+                        <div class="hol">
+                            <input type="text" placeholder="Search">
+                            <i class="bi bi-search"></i>
+                        </div>
+                        <div class="box"><i class="bi bi-bell-fill"></i></div>
+                    </div>
+                </div>
+                <div class="mine mt-4">
+                    <div> 
+                        <h4>Schedule Class</h4>
+                        <form action="">
+                            <div class="row">
+                                <div class="col col-lg-6">
+                                    <label for="">Course Title</label>
+                                    <input type="text" name="" id="">
+                                </div>
+                                <div class="col col-lg-6">
+                                    <label for="">Venue</label>
+                                    <input type="text" name="" id="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-lg-6">
+                                    <label for="">Topic</label>
+                                    <input type="text" name="" id="">
+                                </div>
+                                <div class="col col-lg-6">
+                                    <label for="">Time</label>
+                                    <input type="time" name="" id="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-lg-6">
+                                    <label for="">Date</label>
+                                    <input type="date" name="" id="">
+                                </div>
+                                <div class="col col-lg-6 wat">
+                                    <button type="submit"><i class="bi bi-stars"></i>Schedule now <i class="bi bi-stars"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <h4>My Schedule</h4>
+                        <div class="col col-lg-3 col-12">
+                            <div class="bad">
+                                <div class="d-flex gap-3 align-items-center">
+                                    <div class="any"><i class="bi bi-1-circle-fill" style="color: white; font-size: 23px;"></i></div>
+                                    <h5 style="color: #54baac;" class="mt-2">Data Structure</h5>
+                                </div>
+                                <div class="content mt-2">
+                                    <p>Introductin to variables and data types</p>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-calendar-check-fill" style="color: #54baac;"></i>
+                                        <p>Fri, August 10, 2024</p>
+                                    </div>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-alarm-fill" style="color: #54baac;"></i>
+                                        <p>11PM - 1PM</p>
+                                    </div>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-house-add-fill" style="color: #54baac;"></i>
+                                        <p>250LT</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-12 mat">
+                            <div class="bal">
+                                <div class="d-flex gap-3 align-items-center">
+                                    <div class="any"><i class="bi bi-2-circle-fill" style="color: white; font-size: 23px;"></i></div>
+                                    <h5 style="color: #25252b;" class="mt-2">Data Structure</h5>
+                                </div>
+                                <div class="content mt-2 d-flex flex-column" data-date="2024-08-02">
+                                    <p>Introductin to variables and data types</p>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-calendar-check-fill" style="color: #25252b;"></i>
+                                        <p>Fri, August 2, 2024</p>
+                                    </div>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-alarm-fill" style="color: #25252b;"></i>
+                                        <p>11PM - 1PM</p>
+                                    </div>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-house-add-fill" style="color: #25252b;"></i>
+                                        <p>Sifax LT</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-12 mat">
+                            <div class="bad">
+                                <div class="d-flex gap-3 align-items-center">
+                                    <div class="any"><i class="bi bi-3-circle-fill" style="color: white; font-size: 23px;"></i></div>
+                                    <h5 style="color: #54baac;" class="mt-2">Data Structure</h5>
+                                </div>
+                                <div class="content mt-2">
+                                    <p>Introductin to variables and data types</p>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-calendar-check-fill" style="color: #54baac;"></i>
+                                        <p>Fri, August 10, 2024</p>
+                                    </div>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-alarm-fill" style="color: #54baac;"></i>
+                                        <p>11PM - 1PM</p>
+                                    </div>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-house-add-fill" style="color: #54baac;"></i>
+                                        <p>FAG LT</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-12 mat">
+                            <div class="bal">
+                                <div class="d-flex gap-3 align-items-center">
+                                    <div class="any"><i class="bi bi-4-circle-fill" style="color: white; font-size: 23px;"></i></div>
+                                    <h5 style="color: #25252b;" class="mt-2">Data Structure</h5>
+                                </div>
+                                <div class="content mt-2">
+                                    <p>Introductin to variables and data types</p>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-calendar-check-fill" style="color: #25252b;"></i>
+                                        <p>Fri, August 10, 2024</p>
+                                    </div>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-alarm-fill" style="color: #25252b;"></i>
+                                        <p>11PM - 1PM</p>
+                                    </div>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-house-add-fill" style="color: #25252b;"></i>
+                                        <p>FAG LT</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 mt-4 col-12">
+                            <div class="bad">
+                                <div class="d-flex gap-3 align-items-center">
+                                    <div class="any"><i class="bi bi-5-circle-fill" style="color: white; font-size: 23px;"></i></div>
+                                    <h5 style="color: #54baac;" class="mt-2">Data Structure</h5>
+                                </div>
+                                <div class="content mt-2">
+                                    <p>Introductin to variables and data types</p>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-calendar-check-fill" style="color: #54baac;"></i>
+                                        <p>Fri, August 10, 2024</p>
+                                    </div>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-alarm-fill" style="color: #54baac;"></i>
+                                        <p>11PM - 1PM</p>
+                                    </div>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-house-add-fill" style="color: #54baac;"></i>
+                                        <p>FCI Faculty LT</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 mt-4 col-12">
+                            <div class="bal">
+                                <div class="d-flex gap-3 align-items-center">
+                                    <div class="any"><i class="bi bi-6-circle-fill" style="color: white; font-size: 23px;"></i></div>
+                                    <h5 style="color: #25252b;" class="mt-2">Data Structure</h5>
+                                </div>
+                                <div class="content mt-2">
+                                    <p>Introductin to variables and data types</p>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-calendar-check-fill" style="color: #25252b;"></i>
+                                        <p>Fri, August 10, 2024</p>
+                                    </div>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-alarm-fill" style="color: #25252b;"></i>
+                                        <p>11PM - 1PM</p>
+                                    </div>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-house-add-fill" style="color: #25252b;"></i>
+                                        <p>FCI Faculty LT</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 mt-4 col-12">
+                            <div class="bad">
+                                <div class="d-flex gap-3 align-items-center">
+                                    <div class="any"><i class="bi bi-7-circle-fill" style="color: white; font-size: 23px;"></i></div>
+                                    <h5 style="color: #54baac;" class="mt-2">Data Structure</h5>
+                                </div>
+                                <div class="content mt-2">
+                                    <p>Introductin to variables and data types</p>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-calendar-check-fill" style="color: #54baac;"></i>
+                                        <p>Fri, August 10, 2024</p>
+                                    </div>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-alarm-fill" style="color: #54baac;"></i>
+                                        <p>11PM - 1PM</p>
+                                    </div>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-house-add-fill" style="color: #54baac;"></i>
+                                        <p>FCI Faculty LT</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 mt-4 col-12 fire">
+                            <div class="bal">
+                                <div class="d-flex gap-3 align-items-center">
+                                    <div class="any"><i class="bi bi-8-circle-fill" style="color: white; font-size: 23px;"></i></div>
+                                    <h5 style="color: #25252b;" class="mt-2">Data Structure</h5>
+                                </div>
+                                <div class="content mt-2">
+                                    <p>Introductin to variables and data types</p>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-calendar-check-fill" style="color: #25252b;"></i>
+                                        <p>Fri, August 10, 2024</p>
+                                    </div>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-alarm-fill" style="color: #25252b;"></i>
+                                        <p>11PM - 1PM</p>
+                                    </div>
+                                    <div class="d-flex gap-1">
+                                        <i class="bi bi-house-add-fill" style="color: #25252b;"></i>
+                                        <p>FCI Faculty LT</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="myModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close" style="display: flex; justify-content: end; color: red;">&times;</span>
+                                <h2 id="modalTitle">Modal Title</h2>
+                                <p id="modalContent">This is a modal. It appears on page load and can be closed with the button.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        const currentPageId = "schedule";
+        document.getElementById(currentPageId).classList.add("active");
+
+        const today = new Date().toISOString().split('T')[0];
+    
+        function openModal() {
+            const modal = document.getElementById('myModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalContent = document.getElementById('modalContent');
+            const contentElement = document.querySelector(`.content[data-date="${today}"]`);
+            
+            if (contentElement) {
+                modalTitle.textContent = contentElement.querySelector('p').textContent;
+                modalContent.innerHTML = `
+                    <p>Date: ${contentElement.querySelector('.d-flex').textContent}</p>
+                    <p>Time: ${contentElement.querySelectorAll('.d-flex')[1].textContent}</p>
+                `;
+            } else {
+                modalTitle.textContent = 'No lecture available';
+                modalContent.textContent = 'No class available for today.';
+            }
+            
+            modal.style.display = 'block';
+        }
+        function closeModal() {
+            const modal = document.getElementById('myModal');
+            modal.style.display = 'none';
+        }
+        document.querySelector('.close').onclick = closeModal;
+        window.onload = openModal;
+    </script>  
+</body>
+</html>

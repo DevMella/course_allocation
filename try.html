@@ -1,0 +1,297 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+
+        .container {
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+        }
+        
+        input {
+            width: calc(100% - 50px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        
+        button {
+            padding: 10px;
+            border: none;
+            background-color: #28a745;
+            color: #fff;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #218838;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Change to one column */
+            gap: 10px; /* Space between items */
+            width: 100%;
+        }
+        
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 3px;
+            background-color: yellow; /* Default color */
+            padding: 10px;
+            box-sizing: border-box;
+            /* word-wrap: break-word; 
+            word-break: break-all;  */
+            width: 100%;
+        }
+        
+        li:nth-child(2n) {
+            background-color: purple;
+            color: white;
+        }
+        
+        .content {
+            background-color: white; /* Inner background color */
+            padding: 10px;
+            border-radius: 3px;
+            width: 100%;
+            box-sizing: border-box;
+            width: 300px;
+            word-wrap: break-word; 
+            word-break: break-all; 
+        }
+        
+        li button {
+            background: #dc3545;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        li button:hover {
+            background: #c82333;
+        }
+        
+        li i {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <input type="text" id="todoInput" placeholder="Add a new task">
+        <button onclick="addTodo()">Add</button>
+        <ul id="todoList"></ul>
+    </div>
+    <script>
+        function addTodo() {
+            const todoInput = document.getElementById('todoInput');
+            const todoText = todoInput.value.trim();
+
+            if (todoText !== "") {
+                const todoList = document.getElementById('todoList');
+                
+                const listItem = document.createElement('li');
+                
+                // Create an inner div for content
+                const contentDiv = document.createElement('div');
+                contentDiv.className = 'content';
+
+                // Create an icon element with Font Awesome class
+                const icon = document.createElement('i');
+                icon.className = 'fas fa-check'; // Check icon from Font Awesome
+                contentDiv.appendChild(icon);
+
+                // Create a text node for the todo text
+                const textNode = document.createTextNode(todoText);
+                contentDiv.appendChild(textNode);
+
+                // Create a delete button
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.onclick = function() {
+                    todoList.removeChild(listItem);
+                };
+                contentDiv.appendChild(deleteButton);
+
+                // Add the inner content div to the list item
+                listItem.appendChild(contentDiv);
+
+                // Add the list item to the list
+                todoList.appendChild(listItem);
+
+                todoInput.value = "";
+
+                // Assign background colors dynamically
+                const items = todoList.getElementsByTagName('li');
+                for (let i = 0; i < items.length; i++) {
+                    if (i % 2 === 0) {
+                        items[i].style.backgroundColor = 'yellow';
+                    } else {
+                        items[i].style.backgroundColor = 'purple';
+                        items[i].style.color = 'white';
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>course_allocation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/93483deb2b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="schedule.css">
+    <style>
+        /* Modal styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0; 
+            top: 0; 
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+            padding-top: 60px; 
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto; 
+            padding: 20px; 
+            border: 1px solid #888; 
+            width: 80%; 
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="body">
+            <!-- Your existing content here -->
+                <div class="row">
+                    <div class="col col-lg-3">
+                        <p>Fri, Aug 3,2024</p>
+                    </div>
+                </div>
+            <div class="modal" id="myModal">
+                <div class="modal-content">
+                    <span class="close" id="closeModal">&times;</span>
+                    <h2 id="modalTitle">Modal Title</h2>
+                    <p id="modalContent">This is a modal. It appears on page load and can be closed with the button.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        const currentPageId = "schedule";
+        document.getElementById(currentPageId).classList.add("active");
+
+        function parseDate(dateString) {
+            const formats = [
+                'MM/DD/YYYY', 'M/D/YYYY', 'YYYY-MM-DD', 'YYYY/MM/DD', 'D MMM YYYY', 'D MMMM YYYY',
+                'DD/MM/YYYY', 'DD/MM/YY', 'DD/MM/YYYY', 'YYYY/MM/DD', 'MMM D, YYYY', 'MMMM D, YYYY'
+            ];
+
+            for (let format of formats) {
+                let parsedDate = moment(dateString, format, true);
+                if (parsedDate.isValid()) {
+                    return parsedDate.format('YYYY-MM-DD');
+                }
+            }
+            return null;
+        }
+
+        function openModal() {
+            const modal = document.getElementById('myModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalContent = document.getElementById('modalContent');
+            
+            const today = new Date().toISOString().split('T')[0];
+            let found = false;
+
+            document.querySelectorAll('.content').forEach(contentElement => {
+                const dateText = contentElement.querySelector('.d-flex').textContent.trim();
+                const parsedDate = parseDate(dateText);
+                
+                if (parsedDate === today) {
+                    modalTitle.textContent = contentElement.querySelector('p').textContent;
+                    modalContent.innerHTML = `
+                        <p>Date: ${dateText}</p>
+                        <p>Time: ${contentElement.querySelectorAll('.d-flex')[1].textContent}</p>
+                    `;
+                    found = true;
+                }
+            });
+
+            if (!found) {
+                modalTitle.textContent = 'No content available';
+                modalContent.textContent = 'No content available for today.';
+            }
+            
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('myModal');
+            modal.style.display = 'none';
+        }
+
+        document.getElementById('closeModal').onclick = closeModal;
+        window.onload = openModal;
+    </script>  
+</body>
+</html>
